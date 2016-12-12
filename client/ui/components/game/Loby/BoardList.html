@@ -1,0 +1,22 @@
+<template name="BoardList">
+    <div class="board-list">
+        <div class="card">
+            <h3 class="card-header blue-gradient white-text">Board List</h3>
+            <div class="card-block">
+                {{#if Template.subscriptionsReady}}
+                    {{#unless haveBoards}}
+                        There is no board.Please go create a <a href="/board/new">new board.</a>
+                    {{else}}
+                    <ul class="list-group">
+                            {{#each board}}
+                                {{> BoardItem}}
+                            {{/each}}
+                    </ul>
+                    {{/unless}}
+                {{else}}
+                    Loading...
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</template>

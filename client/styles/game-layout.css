@@ -1,0 +1,68 @@
+
+/*New Game Form Styles*/
+.new-form {
+    background-color: white;
+}
+
+.new-form .tittle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.new-form .tittle span {
+    width: auto;
+    color: white;
+    background-color: blue;
+    font-size: 2.5em;
+    padding: 10px 15px 10px 15px;
+
+}
+.new-form .tittle span i {
+    color: #FF7D1A;
+}
+/*END New Game Form Styles*/
+
+/*Loby*/
+.board-list {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.board-list .card-header{
+    padding:15px;
+}
+
+.board-list .card-block{
+    padding-top: 5px;
+    padding-right : 10px;
+    padding-left: 10px;
+    padding-bottom : 1px;
+}
+
+.board-list .card-block li:hover{
+    background-color: #F3F3F3;
+    cursor: pointer;
+}
+.board-list .card-block li i{
+    float: right;
+    font-size: 1.3em;
+}
+
+.board-list .card-block li .username{
+    font-weight: normal !important;
+    font-size: 1em;
+    
+}
+/*ENDLoby*/
+
+/*BoardPassword*/
+.board-password {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.board-password form {
+    padding : 10px;
+    padding-top: 0px;
+}

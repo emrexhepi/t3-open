@@ -1,0 +1,22 @@
+<template name="Play">
+    <div class="play animated fadeIn">
+        {{#if Template.subscriptionsReady}}
+            {{#unless board}}
+                <h2>Error: no board found!</h2>
+            {{else}}
+                <h2>Board: {{board.name}}</h2>
+                
+                {{#unless board.full}}
+                    <h2>Waiting for the other player...</h2>
+                {{/unless}}
+
+                {{#if usersReady}}
+                    {{> GameBoard}}
+                {{/if}}
+            {{/unless}}
+        {{else}}
+            <h3>Loading Board...</h3>
+        {{/if}}
+
+    </div>
+</template>

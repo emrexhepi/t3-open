@@ -1,0 +1,27 @@
+<template name="GameNav">
+    <nav class="navbar navbar-fixed-left col-md-2 col-sm-2 col-xs-2">
+        {{#if currentUser}}
+            {{> UserPoints}}
+        {{/if}}
+        <ul>
+            <a href="/board/new" class="btn {{isActiveRoute 'New' class='btn-blue-grey'}} {{isNotActiveRoute 'New' class='btn-unique'}} waves-effect">
+                <li>
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <p class="hidden-xs hiddehn-sm">New</p>
+                </li>
+            </a>
+            <a href="/board/loby" class="btn  {{isActiveRoute 'Loby' class='btn-blue-grey'}} {{isNotActiveRoute 'Loby' class='btn-unique'}} btn-unique waves-effect">
+                <li>
+                    <i class="fa fa-gamepad" aria-hidden="true"></i>
+                    <p class="hidden-xs hiddehn-sm">Loby</p>
+                </li>
+            </a>
+            <a href="/board/random" class="{{isActiveRoute 'Random' class='btn-blue-grey'}} {{isNotActiveRoute 'Random' class='btn-unique'}} btn btn-unique waves-effect">
+                <li>
+                    <i class="fa fa-rocket" aria-hidden="true"></i>
+                    <p class="hidden-xs hiddehn-sm">Random</p>
+                </li>
+            </a>
+        </ul>
+    </nav>
+</template>

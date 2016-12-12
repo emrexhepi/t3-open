@@ -1,0 +1,23 @@
+<template name="New">
+    <div class="new animated fadeIn flex-center">
+        <form class="new-form col-md-5 col-sm-6 z-depth-1">
+            <div class="tittle ">
+                <span class="font-weight-bold z-depth-1 blue-gradient">New Board <i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+            </div>
+            <div class="form-group">
+                <label for="board-name">Board Name</label>
+                <input type="text" class="form-control" name="boardName" placeholder="Enter Board Name" minlength="4" maxlength="12" required>
+                <small class="form-text text-muted">Please enter a board name so others can find it easely in the loby.</small>
+            </div>
+            <div class="form-group">
+                <label for="board-passowrd">Board Password</label>
+                <input type="password" class="form-control" name="boardPass" placeholder="Enter Board Password">
+                <small class="form-text text-muted">Enter Board passord to protect the board. <strong>Leave it blank if not needed.</strong></small>
+            </div>
+            <div class="text-center">
+                <input type="submit" class="btn btn-success waves-effect waves-light start" value="Create Board!">
+                <hr />
+            </div>
+        </form>
+    </div>
+</template>

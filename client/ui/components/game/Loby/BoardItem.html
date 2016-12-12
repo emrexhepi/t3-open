@@ -1,0 +1,11 @@
+<template name="BoardItem">
+    <li class="list-group-item {{#if full}}watch{{else}}play{{/if}}">
+        <spane class="name text-uppercase">{{name}}</spane> - <span class="username text-muted">@{{ownerUsername}}</span>
+        {{#if locked}}<i class="fa fa-lock pull-right" aria-hidden="true"></i>{{/if}}
+        {{#unless full}}
+            <i class="fa fa-sign-in right"></i>
+        {{else}}
+            <i class="fa fa-eye right"></i>
+        {{/unless}}
+    </li>
+</template>

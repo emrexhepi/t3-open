@@ -1,0 +1,10 @@
+<template name="GameLayout">
+    {{> TopNav}}
+    {{> GameNav}}
+    <div class="container-fludid">
+        <div class="col-md-2 col-sm-2 col-xs-2"></div>
+        <div class=" main col-md-10 col-xs-10">
+            {{> Template.dynamic template=main}}
+        </div>
+    </div>
+</template>
