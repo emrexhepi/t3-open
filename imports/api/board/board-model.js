@@ -15,11 +15,13 @@ export default class {
         this.full = false;
         this.playerOne = {
             id : _player._id,
+            username : _player.username,
             symbol : "X",
             points : 0,
         };
         this.playerTwo = {
             id : null,
+            username : "",
             symbol : "O",
             points : 0
         };

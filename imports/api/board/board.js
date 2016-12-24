@@ -63,6 +63,7 @@ Meteor.methods({
             //update the board with users information
             let playerTwo = board.playerTwo;
             playerTwo.id = this.userId;
+            playerTwo.username = user.username;
 
             //update the board with the player details and make the board full
             //so nobody can enter the game anymore
@@ -110,7 +111,7 @@ Meteor.methods({
             //delete board from users profile
             currentBoard = {
                 id : "",
-                passwprd : ""
+                password : ""
             }
             profile.currentBoard = currentBoard;
             //update user then terminate the method

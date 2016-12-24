@@ -66,3 +66,61 @@
     padding : 10px;
     padding-top: 0px;
 }
+
+/*END BoardPassowrd*/
+
+
+/*Game Board*/
+.outer-game-table {
+    width : 100%;
+}
+.game-table {
+    border: 3px solid #FF7D1A;
+    background: seagreen;
+    color : #FFFFFF;
+    font-weight: bold;
+}
+
+.game-table .players-info {
+    margin: 5px;
+    font-weight: 900;
+    padding: 0px !important;
+}
+
+.game-table .player {
+    padding: 0px;
+    
+}
+
+.outer-game-board {
+    clear: both;
+    margin-top: 20px;
+    margin-bottom : 20px;
+}
+
+.game-board {
+    display: flex;
+    width: 372px;
+    height: 360px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.game-board .square {
+    margin: 2px;
+    height: 120px;
+    width: 120px;
+    box-sizing: border-box;
+    display: flex;
+    font-size: 5em;
+    justify-content:center;
+    align-items: center;
+    background-color: lightblue;
+}
+
+.game-board .square:hover {
+    background-color: #80cd92;
+    cursor: pointer;
+}
+/*END Game Board*/

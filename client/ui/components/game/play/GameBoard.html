@@ -1,0 +1,9 @@
+<template name="GameBoard">
+    <div class="row outer-game-board flex-center">
+        <div class="game-board">
+            {{#each board.board}}
+                <div class="col-md-4 col-sm-4 col-xs-4 square">{{this}} s</div>
+            {{/each}}
+        </div>
+    </div>
+</template>
