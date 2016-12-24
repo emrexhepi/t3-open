@@ -2,7 +2,8 @@
   "name": "t3-open",
   "private": true,
   "scripts": {
-    "start": "sh start-meteor.sh"
+    "start": "meteor",
+    "start-sh" : "sh start-meteor.sh"
   },
   "dependencies": {
     "babel-runtime": "6.18.0",
