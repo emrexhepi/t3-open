@@ -1,12 +1,11 @@
-### T3-Open
+#**Welcome to T3-Open**
+A **Tic-Tac-Toe** multiplayer game built with MeteorJS.
 
-# Multiplayer tic tac toe game built with meteorjs
+###Intsall
 
-# how to run:
+ 1. Instal MeteorJS from http://meteor.com
+ 2. Pull the project to folder
+ 3. Type "npm install" in command line then enter 
+ 4. To run type "meteor" in command line and then pres enter
 
-+1 install npm
-+2 install meteorjs
-+3 clone repository
-+4 enter the directory
-+5 comman line type : npm install
-+6 run meteor with "meteor" command
+Have fun!
