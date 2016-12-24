@@ -18,12 +18,14 @@ export default class {
             username : _player.username,
             symbol : "X",
             points : 0,
+            turn : true
         };
         this.playerTwo = {
             id : null,
             username : "",
             symbol : "O",
-            points : 0
+            points : 0,
+            turn : false
         };
         this.board = [
             "", "", "",

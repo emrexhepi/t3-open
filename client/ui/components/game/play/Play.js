@@ -1,6 +1,5 @@
 Template.Play.created = function () {
     var self = this;
-    var user = Meteor.user();
     self.autorun(function () {
         self.subscribe("board-auth");
     })

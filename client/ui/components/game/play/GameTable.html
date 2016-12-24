@@ -3,13 +3,13 @@
         <div class="col-md-10 col-sm-11 col-xs-12 game-table text-left">
             <div class="row players-info">
                 <div class="player-1 player col-md-6 col-sm-6 col-xs-6 player pull-left text-left text-uppercase">
-                    <h4>{{board.playerOne.username}} : {{board.playerOne.points}}</h4>
+                    <h4 class="{{#if board.playerOne.turn}}player-turn{{/if}}">{{board.playerOne.username}} : {{board.playerOne.points}}</h4>
                 </div>
                 <div class="player-2 player col-md-6 col-sm-6 col-xs-6 pull-right text-right text-uppercase">
-                    <h4>{{board.playerTwo.username}} : {{board.playerTwo.points}}</h4>
+                    <h4 class="{{#if board.playerTwo.turn}}player-turn{{/if}}">{{board.playerTwo.username}} : {{board.playerTwo.points}}</h4>
                 </div>
             </div>
-            {{> GameBoard board=board}}
+            {{> GameBoard turn=turn board=board}}
         </div>
     </div>
 

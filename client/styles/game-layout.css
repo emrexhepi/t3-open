@@ -89,7 +89,16 @@
 
 .game-table .player {
     padding: 0px;
-    
+}
+
+.game-table .player h4 {
+    font-weight: bold;
+    text-shadow: 0px 0px 5px black;
+    color: #80CD92;
+}
+
+.game-table .player .player-turn {
+    color: white;
 }
 
 .outer-game-board {
@@ -101,7 +110,7 @@
 .game-board {
     display: flex;
     width: 372px;
-    height: 360px;
+    height: 371px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -118,9 +127,11 @@
     align-items: center;
     background-color: lightblue;
 }
-
-.game-board .square:hover {
-    background-color: #80cd92;
+.game-board.unlock-table {
+    box-shadow: 0px 0px 20px white;
+}
+.game-board.unlock-table .square:hover {
+    background-color: #FF7D1A;
     cursor: pointer;
 }
 /*END Game Board*/
