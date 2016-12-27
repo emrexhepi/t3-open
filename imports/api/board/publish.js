@@ -1,7 +1,7 @@
 Meteor.publish("boards", function () {
     if (!this.userId) return false;
     return Boards.find({
-        finished: false
+        finished: false, full : false
     }, {
         fields: {
             name: 1,

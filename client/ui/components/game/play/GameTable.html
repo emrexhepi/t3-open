@@ -3,14 +3,47 @@
         <div class="col-md-10 col-sm-11 col-xs-12 game-table text-left">
             <div class="row players-info">
                 <div class="player-1 player col-md-6 col-sm-6 col-xs-6 player pull-left text-left text-uppercase">
-                    <h4 class="{{#if board.playerOne.turn}}player-turn{{/if}}">{{board.playerOne.username}} : {{board.playerOne.points}}</h4>
+                    <h4 class="{{#if board.playerOne.turn}}player-turn{{/if}}">{{board.playerOne.symbol}}-{{board.playerOne.username}} : {{board.playerOne.points}}</h4>
                 </div>
                 <div class="player-2 player col-md-6 col-sm-6 col-xs-6 pull-right text-right text-uppercase">
-                    <h4 class="{{#if board.playerTwo.turn}}player-turn{{/if}}">{{board.playerTwo.username}} : {{board.playerTwo.points}}</h4>
+                    <h4 class="{{#if board.playerTwo.turn}}player-turn{{/if}}">{{board.playerTwo.symbol}}-{{board.playerTwo.username}} : {{board.playerTwo.points}}</h4>
                 </div>
             </div>
-            {{> GameBoard turn=turn board=board}}
+            <div class="{{#if fullMoves}}replay-endgame-bg{{/if}}">
+                {{> GameBoard turn=turn board=board userSpace = userSpace}}
+            </div>
+            {{#if fullMoves}}
+            <div class="replay-endgame-content flex-center">
+                <row>
+
+                    {{#if board.finished}}
+                        <div class="col-xs-12 text-center">
+                            <h3>This game is finished!</h3>
+                            <p>Go play another one!</p>
+                        </div>
+                    {{else}}
+                        {{#if waitingOtherPlayer}}
+                            <div class="col-xs-12 text-center">
+                                <h3>Waiting the other Player!</h3>
+                            </div>
+                        {{/if}}
+                        {{#unless waitingOtherPlayer}}
+                            <div class="col-xs-12 text-center">
+                                {{#if board.won}}
+                                    <h3><strong class="text-uppercase">{{board.won}}</strong> won!</h3>
+                                    {{else}}
+                                    <h3>DRAW!</h3>
+                                {{/if}}
+                            </div>
+                            <div class="col-xs-12 text-center">
+                                <button class="btn btn-lg btn-success waves-effect waves-light replay">Replay!</button>
+                                <button class="btn btn-lg btn-warning waves-effect waves-light end-game">End Game!</button>
+                            </div>
+                        {{/unless}}
+                    {{/if}}
+                </row>
+            </div>
+            {{/if}}
         </div>
     </div>
-
 </template>

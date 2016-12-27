@@ -15,6 +15,6 @@ Template.Play.helpers({
     },
     usersReady(){
         let board = Boards.findOne();
-        return (board.full && !board.finished);
+        return board.full;
     }
 });
