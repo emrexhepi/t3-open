@@ -8,7 +8,9 @@ A **Tic-Tac-Toe** multiplayer game built with MeteorJS.
  3. Type "npm install" in command line then enter 
  4. To run type "meteor" in command line and then pres enter
 
-Have fun!
+Bugs:
+ 1. On user leave
+
 
 Disclaimer:
 NOT A PRODUCTION READY APP.
