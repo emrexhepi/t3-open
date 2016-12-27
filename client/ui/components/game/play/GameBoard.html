@@ -2,7 +2,7 @@
     <div class="row outer-game-board flex-center">
         <div class="game-board {{#if turn}}unlock-table{{/if}}">
             {{#each board.board}}
-                <div class="col-md-4 col-sm-4 col-xs-4 square {{#unless this}}hover{{/unless}}" data-id="{{@index}}">{{this}}</div>
+                <div class="col-md-4 col-sm-4 col-xs-4 square {{#unless this}}hover{{/unless}}" data-index="{{@index}}">{{this}}</div>
             {{/each}}
         </div>
     </div>

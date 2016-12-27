@@ -25,5 +25,25 @@ Template.GameTable.helpers({
     },
     turn(){
         return Template.instance().Turn.get();
+    },
+    userSpace() {
+        return Template.instance().userSpace;
+    },
+    fullMoves(){
+        return Template.instance().Board.get().moves > 8;
+    },
+    waitingOtherPlayer(){
+        var currentPlayer = Template.instance().userSpace;
+        var board = Template.instance().Board.get();
+        return board[currentPlayer].replay;
     }
 });
+
+Template.GameTable.events({
+    "click .replay-endgame-content .replay"(){
+        Meteor.call("board.replay");
+    },
+    "click .replay-endgame-content .end-game"(){
+        Meteor.call("board.endGame");
+    }
+})

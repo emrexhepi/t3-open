@@ -18,7 +18,8 @@ export default class {
             username : _player.username,
             symbol : "X",
             points : 0,
-            turn : true
+            turn : true,
+            replay : false
         };
         this.playerTwo = {
             id : null,
@@ -28,12 +29,15 @@ export default class {
             turn : false
         };
         this.board = [
-            "", "", "",
-            "", "", "",
+            "", "", "", 
+            "", "", "", 
             "", "", ""
         ];
         this.watchers = [];
+        this.gameFinished = false;
         this.finished = false;
+        this.moves = 0;
+        this.replayCounter = 0;
         this.won = "";
         this.scoreCalculated = false;
         this.chat = [];
